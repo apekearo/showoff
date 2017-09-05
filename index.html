@@ -1,640 +1,211 @@
 <!DOCTYPE html>
 <html>
-<title>Anthony Pekearo</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-}
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-    background-image: url('rasta1.jpg');
-    min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-    background-image: url("rasta2.jpg");
-    min-height: 400px;
-  }
-
-/* Third image (Contact) */
-.bgimg-3 {
-    background-image: url("rasta3.jpg");
-    min-height: 400px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-    }
-}
-
-/**********************Line Graph********************/
-
-
-.wrapper {
-  display: block;
-  margin: 5em auto;
-  border: 1px solid #555;
-  width: 700px;
-  height: 350px;
-  position: relative;
-  background-color: #FCF3CF
-}
-p{text-align:center;}
-.label {
-  height: 1em;
-  padding: .3em;
-  background: rgba(255, 255, 255, .8);
-  position: absolute;
-  display: none;
-  color:#333;
-  
-}
-
-.shadow {
-  border: 3px solid grey;
-}
-</style>
+<head>
+  <title>APekearo Vue Portfolio</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+</head>
 <body>
+ <div id="app">
+   <v-app light>
+    <v-toolbar class="white">
+      <v-toolbar-title v-text="title"></v-toolbar-title>
+    </v-toolbar>
+    <main>
+      <section>
+        <v-parallax src="assets/hero.jpeg" height="600">
+          <v-layout
+            column
+            align-center
+            justify-center
+            class="white--text"
+          >
+            <!-- <img src="assets/vuetify.png" alt="Vuetify.js"> -->
+            <h1 class="white--text mb-2 display-3">Web Developer</h1>
+            <div class="headline mb-3 text-xs-center">Creator: Anthony Pekearo</div>
+            <!-- <v-btn
+              class="blue lighten-2 mt-5"
+              dark
+              large
+              href="/pre-made-themes"
+            >
+              Get Started
+            </v-btn> -->
+          </v-layout>
+        </v-parallax>
+      </section>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a> -->
-  </div>
+      <section>
+        <v-layout
+          column
+          wrap
+          class="my-5"
+          align-center
+        >
+          <v-flex xs12 sm4 class="my-3">
+            <div class="text-xs-center">
+              <h2 class="headline">A Great Resource For Building Your Next Project</h2>
+              <span class="subheading">
+                Will Build All Types Of Ideas 
+              </span>
+            </div>
+          </v-flex>
+          <v-flex xs12>
+            <v-container grid-list-xl>
+              <v-layout row wrap align-center>
+                <v-flex xs12 md4>
+                  <v-card class="elevation-0 transparent">
+                    <v-card-text class="text-xs-center">
+                      <v-icon x-large class="blue--text text--lighten-2">color_lens</v-icon>
+                    </v-card-text>
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline text-xs-center">Style &amp; Design</div>
+                    </v-card-title>
+                    <v-card-text>
+                      Applying original styling languages and modern styling frameworks 
+                      to a developing web based world.  As simple or complicated as it may 
+                      be, anything is possible, as I make sure you have the style you want to 
+                      represent your product.
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+                <v-flex xs12 md4>
+                  <v-card class="elevation-0 transparent">
+                    <v-card-text class="text-xs-center">
+                      <v-icon x-large class="blue--text text--lighten-2">flash_on</v-icon>
+                    </v-card-text>
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline">Fast development</div>
+                    </v-card-title>
+                    <v-card-text>
+                      Using the newest tools and development methods, I will make any deadline set,
+                      and will be an asset when needing changes done quickly.  Scaling up or creating 
+                      from ground up, the finished product will have a modern, responsive, and activated 
+                      user experience.
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+                <v-flex xs12 md4>
+                  <v-card class="elevation-0 transparent">
+                    <v-card-text class="text-xs-center">
+                      <v-icon x-large class="blue--text text--lighten-2">build</v-icon>
+                    </v-card-text>
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline text-xs-center">Completely Open Sourced</div>
+                    </v-card-title>
+                    <v-card-text>
+                    I have always supported the open source community, and will always contribute 
+                    to github and stackoverflow forums.  The support and quality of open source tools 
+                    help fuel a fluid internet that will continue to flourish as we perfect the flow of 
+                    all the tools.  
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </v-flex>
+        </v-layout>
+      </section>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
-</div>
+      <section>
+        <v-parallax src="assets/section.jpeg" height="380">
+          <v-layout column align-center justify-center>
+            <div class="headline white--text mb-3">Dreams of your own site becoming reality have never been closer</div>
+            <em>Contact Me Today To See What We Can Make Happen</em>
+            <!-- <v-btn
+              class="blue lighten-2 mt-5"
+              dark
+              large
+              href="/pre-made-themes"
+            >
+              Get Started
+            </v-btn> -->
+          </v-layout>
+        </v-parallax>
+      </section>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle w3-container" style="white-space:nowrap;">
-<!--     <img  src="logo.png" alt="logo">
- -->    <span class="w3-center w3-padding-large w3-khaki w3-xlarge w3-wide w3-animate-opacity"><span class="w3-hide-small">Web</span> Developer</span></div></div>
+      <section>
+        <v-container grid-list-xl>
+          <v-layout row wrap justify-center class="my-5">
+            <v-flex xs12 sm4>
+              <v-card class="elevation-0 transparent">
+                <v-card-title primary-title class="layout justify-center">
+                  <div class="headline">Anthony Pekearo</div>
+                </v-card-title>
+                <v-card-text>
+                  Two and a half years of solid coding, has only made me fall more into the groove of making
+                   amazing programs.  Its a multifaceted industry that keeps me on my toes and I like that.  
+                   When I make a project plan with someone, I work night and day to get it done as quickly as possible.
+                   I have a solid support group from schooling at University of Texas in Austin, and a good group of friends 
+                   that help me stay creative when building projects.  I have good time coding things out.  Let's work together!
+                </v-card-text>
+              </v-card>
+            </v-flex>
+            <v-flex xs12 sm4 offset-sm1>
+              <v-card class="elevation-0 transparent">
+                <v-card-title primary-title class="layout justify-center">
+                  <div class="headline">Contact me</div>
+                </v-card-title>
+                <v-card-text>
+Email me about a job, an idea, or just to say hello! Thank You Guys!!</v-card-text>
+                <v-list class="transparent">
+                  <v-list-tile>
+                    <v-list-tile-action>
+                      <v-icon class="blue--text text--lighten-2">phone</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                      <v-list-tile-title>817-688-3665</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                  <v-list-tile>
+                    <v-list-tile-action>
+                      <v-icon class="blue--text text--lighten-2">place</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                      <v-list-tile-title>Austin,TX US</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                  <v-list-tile>
+                    <v-list-tile-action>
+                      <v-icon class="blue--text text--lighten-2">email</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                      <v-list-tile-title>apekearo@gmail.com</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </section>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>Web Developer</em></p>
-  <p>Some say I'm too much of a doer for how much of a dreamer I am. This coding will allow some of my dreams to become reality. My motivation is an itching drive to follow through with ideas I want to create, as well as accepting to work with a team to daunt through the code to mutual goals. I enjoy the pace and reliability of using new computer technologies. I find being a web developer to be a deep well that I can continue to pull from for help, artistic enjoyment, as well as forming partnerships. I look forward to building and using my education to better my community and build a better tomorrow.</p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>Anthony Pekearo</b></p><br>
-      <img src="tony5.jpg" class="w3-round w3-image w3-hover-opacity-off" alt="Photo of Me" width="120" height="120">
-    </div>
-
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am building my skills and showing them off.  Please bring me on board to help complete a project for you!</p>
-    </div>
-  </div>
-  <p class="w3-large w3-center w3-hide-small w3-padding-16">I actively develop my skills:</p>
-  
-<!--   ******************** Line Graph Code ********************
- -->
-<div class="w3-hide-small">
- <div class="wrapper">
-  <canvas id='c'></canvas>
-  <div class="label">text</div>
-</div>
-<p>Please mouse over the dots</p></div>
-
-<!-- *****************************Line Graph Code ***************************
- -->
-  <p class="w3-wide"></p>
-
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%"></div>
-  </div>
-  <p class="w3-wide"></p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%"></div>
-  </div>
-  <p class="w3-wide"></p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%"></div>
-  </div>
-</div>
-
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">6+</span><br>
-    Partners
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">32+</span><br>
-    Projects Done
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">10+</span><br>
-    Happy Clients
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">10+</span><br>
-    Languages
-  </div>
-</div>
-
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
-  </div>
-</div>
-
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest projects.<br> Click on the images to check them out.</em></p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <a href="https://apekearo.github.io/Hangman-Game/index.html" target="_blank"><img src="hangman.png" style="width:100%" class="shadow w3-hover-opacity" alt="Hangman-Game"></a>
-    </div>
-
-    <div class="w3-col m3">
-      <a href="https://apekearo.github.io/week-4-game/index.html" target="_blank"><img src="golf.png" style="width:100%" class="shadow w3-hover-opacity" alt="RpgGame"></a>
-    </div>
-
-    <div class="w3-col m3">
-    <a href="https://mighty-chamber-28877.herokuapp.com/" target="_blank">
-      <img src="starChar.png" style="width:100%" class="shadow w3-hover-opacity" alt="StarWarsCharacterSelect"></a>
-    </div>
-
-    <div class="w3-col m3">
-      <a href="https://stumput.github.io" target="_blank"><img src="stump.png" style="width:100%" class="shadow w3-hover-opacity" alt="Stump"></a>
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <a href="https://www.crazyricky.com" target="_blank"><img src="crazy.png" style="width:100%" class="shadow w3-hover-opacity" alt="CrazyRickys"></a>
-    </div>
-
-    <div class="w3-col m3">
-      <a href="https://apekearo.github.io/giphyAPI/index.html" target="_blank"><img src="giphy.png" style="width:100%" class="shadow w3-hover-opacity" alt="giphyAPI"></a>
-    </div>
-
-    <div class="w3-col m3">
-    <a href="https://redwraps.github.io" target="_blank">
-      <img src="redWrap.png" style="width:100%" class="shadow w3-hover-opacity" alt="redWraps"></a>
-    </div>
-
-    <div class="w3-col m3">
-    <a href="https://apekearo.github.io/FarmHand/employeesProfiles.html" target="_blank">
-      <img src="heyEarl.png" style="width:100%" class="shadow w3-hover-opacity" alt="heyEarl">
-    </a>
-
-        <!-- <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <!-- Add Google Maps -->
-<!--       <div id="googleMap" class="w3-round-large w3-greyscale" style=""></div>
- -->    
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.701248965176!2d-97.7198554!3d30.274092299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5b0679345f5%3A0xef46689639d29eae!2sRio+Rita!5e0!3m2!1sen!2sus!4v1499316354194" width="240" height="300" frameborder="0" style="border:0" class="w3-greyscale" allowfullscreen></iframe></div>
-
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Austin, TX USA<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 817-688-3665<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: apekearo@gmail.com<br>
-      </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form method="POST" action="https://formspree.io/apekearo@gmail.com">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-  <a href="https://github.com/apekearo/"><i class="fa fa-github w3-hover-opacity"></i></a>
-  <a href="https://www.linkedin.com/in/apekearo/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-  <a href="https://stackoverflow.com/users/7655302/datavader"><i class="fa fa-stack-overflow w3-hover-opacity"></i>
-  </div>
-  <p>Created by<a href="https://apekearo.github.io/showoff" title="portfolio" target="_blank" class="w3-hover-text-green">Anthony Pekearo</a></p>
-</footer>
- 
-<!-- Add Google Maps -->
-<script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+       <v-footer class="blue darken-2">
+        <v-layout row wrap align-center>
+          <v-flex xs12>
+            <!-- <div class="white--text ml-3">
+              Made with
+              <v-icon class="red--text">favorite</v-icon>
+              by <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a>
+              and <a class="white--text" href="mailto:costa.huang@outlook.com">Anthony Pekearo</a>
+            </div> -->
+          </v-flex>
+        </v-layout>
+      </v-footer> 
+    </main>
+  </v-app>
+ </div>
+ <script src="https://unpkg.com/vue/dist/vue.js"></script>
+ <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+ <script>
+   new Vue({
+    el: '#app',
+    data () {
+      return {
+        title: 'Web Developer: Anthony Pekearo'
+      }
     }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-
-var label = document.querySelector(".label");
-var c = document.getElementById("c");
-var ctx = c.getContext("2d");
-var cw = c.width = 700;
-var ch = c.height = 350;
-var cx = cw / 2,
-  cy = ch / 2;
-var rad = Math.PI / 180;
-var frames = 0;
-
-ctx.lineWidth = 1;
-ctx.strokeStyle = "#999";
-ctx.fillStyle = "#ccc";
-ctx.font = "14px monospace";
-
-var grd = ctx.createLinearGradient(0, 0, 0, cy);
-grd.addColorStop(0, "hsla(167,72%,60%,1)");
-grd.addColorStop(1, "hsla(167,72%,60%,0)");
-
-
-var oData = {
-  "Mondo DB": 6,
-    "Node": 8,
-  "DataSci": 6,
-  "Javascript": 7,
-  "Css": 8,
-  "Html": 10,
- };
-
-var valuesRy = [];
-var propsRy = [];
-for (var prop in oData) {
-
-  valuesRy.push(oData[prop]);
-  propsRy.push(prop);
-}
-
-
-var vData = 4;
-var hData = valuesRy.length;
-var offset = 50.5; //offset chart axis
-var chartHeight = ch - 2 * offset;
-var chartWidth = cw - 2 * offset;
-var t = 1 / 7; // curvature : 0 = no curvature 
-var speed = 0.4; // for the animation
-
-var A = {
-  x: offset,
-  y: offset
-}
-var B = {
-  x: offset,
-  y: offset + chartHeight
-}
-var C = {
-  x: offset + chartWidth,
-  y: offset + chartHeight
-}
-
-/*
-      A  ^
-      |  |  
-      + 25
-      |
-      |
-      |
-      + 25  
-      |__|_________________________________  C
-      B
-*/
-
-// CHART AXIS -------------------------
-ctx.beginPath();
-ctx.moveTo(A.x, A.y);
-ctx.lineTo(B.x, B.y);
-ctx.lineTo(C.x, C.y);
-ctx.stroke();
-
-// vertical ( A - B )
-var aStep = (chartHeight - 50) / (vData);
-
-var Max = Math.ceil(arrayMax(valuesRy) / 10) * 10;
-var Min = Math.floor(arrayMin(valuesRy) / 10) * 10;
-var aStepValue = (Max - Min) / (vData);
-console.log("aStepValue: " + aStepValue); //8 units
-var verticalUnit = aStep / aStepValue;
-
-var a = [];
-ctx.textAlign = "right";
-ctx.textBaseline = "middle";
-for (var i = 0; i <= vData; i++) {
-
-  if (i == 0) {
-    a[i] = {
-      x: A.x,
-      y: A.y + 25,
-      val: Max
-    }
-  } else {
-    a[i] = {}
-    a[i].x = a[i - 1].x;
-    a[i].y = a[i - 1].y + aStep;
-    a[i].val = a[i - 1].val - aStepValue;
-  }
-  drawCoords(a[i], 3, 0);
-}
-
-//horizontal ( B - C )
-var b = [];
-ctx.textAlign = "center";
-ctx.textBaseline = "hanging";
-var bStep = chartWidth / (hData + 1);
-
-for (var i = 0; i < hData; i++) {
-  if (i == 0) {
-    b[i] = {
-      x: B.x + bStep,
-      y: B.y,
-      val: propsRy[0]
-    };
-  } else {
-    b[i] = {}
-    b[i].x = b[i - 1].x + bStep;
-    b[i].y = b[i - 1].y;
-    b[i].val = propsRy[i]
-  }
-  drawCoords(b[i], 0, 3)
-}
-
-function drawCoords(o, offX, offY) {
-  ctx.beginPath();
-  ctx.moveTo(o.x - offX, o.y - offY);
-  ctx.lineTo(o.x + offX, o.y + offY);
-  ctx.stroke();
-
-  ctx.fillText(o.val, o.x - 2 * offX, o.y + 2 * offY);
-}
-//----------------------------------------------------------
-
-// DATA
-var oDots = [];
-var oFlat = [];
-var i = 0;
-
-for (var prop in oData) {
-  oDots[i] = {}
-  oFlat[i] = {}
-
-  oDots[i].x = b[i].x;
-  oFlat[i].x = b[i].x;
-
-  oDots[i].y = b[i].y - oData[prop] * verticalUnit - 25;
-  oFlat[i].y = b[i].y - 25;
-
-  oDots[i].val = oData[b[i].val];
-  
-  i++
-}
-
-
-
-///// Animation Chart ///////////////////////////
-//var speed = 3;
-function animateChart() {
-  requestId = window.requestAnimationFrame(animateChart);
-  frames += speed; //console.log(frames)
-  ctx.clearRect(60, 0, cw, ch - 60);
-  
-  for (var i = 0; i < oFlat.length; i++) {
-    if (oFlat[i].y > oDots[i].y) {
-      oFlat[i].y -= speed;
-    }
-  }
-  drawCurve(oFlat);
-  for (var i = 0; i < oFlat.length; i++) {
-      ctx.fillText(oDots[i].val, oFlat[i].x, oFlat[i].y - 25);
-      ctx.beginPath();
-      ctx.arc(oFlat[i].x, oFlat[i].y, 3, 0, 2 * Math.PI);
-      ctx.fill();
-    }
-
-  if (frames >= Max * verticalUnit) {
-    window.cancelAnimationFrame(requestId);
-    
-  }
-}
-requestId = window.requestAnimationFrame(animateChart);
-
-/////// EVENTS //////////////////////
-c.addEventListener("mousemove", function(e) {
-  label.innerHTML = "";
-  label.style.display = "none";
-  this.style.cursor = "default";
-
-  var m = oMousePos(this, e);
-  for (var i = 0; i < oDots.length; i++) {
-
-    output(m, i);
-  }
-
-}, false);
-
-function output(m, i) {
-  ctx.beginPath();
-  ctx.arc(oDots[i].x, oDots[i].y, 20, 0, 2 * Math.PI);
-  if (ctx.isPointInPath(m.x, m.y)) {
-    //console.log(i);
-    label.style.display = "block";
-    label.style.top = (m.y + 10) + "px";
-    label.style.left = (m.x + 10) + "px";
-    label.innerHTML = "<strong>" + propsRy[i] + "</strong>: " + valuesRy[i] + "%";
-    c.style.cursor = "pointer";
-  }
-}
-// ***************Line Graph******************
-// CURVATURE
-function controlPoints(p) {
-  // given the points array p calculate the control points
-  var pc = [];
-  for (var i = 1; i < p.length - 1; i++) {
-    var dx = p[i - 1].x - p[i + 1].x; // difference x
-    var dy = p[i - 1].y - p[i + 1].y; // difference y
-    // the first control point
-    var x1 = p[i].x - dx * t;
-    var y1 = p[i].y - dy * t;
-    var o1 = {
-      x: x1,
-      y: y1
-    };
-
-    // the second control point
-    var x2 = p[i].x + dx * t;
-    var y2 = p[i].y + dy * t;
-    var o2 = {
-      x: x2,
-      y: y2
-    };
-
-    // building the control points array
-    pc[i] = [];
-    pc[i].push(o1);
-    pc[i].push(o2);
-  }
-  return pc;
-}
-
-function drawCurve(p) {
-
-  var pc = controlPoints(p); // the control points array
-
-  ctx.beginPath();
-  //ctx.moveTo(p[0].x, B.y- 25);
-  ctx.lineTo(p[0].x, p[0].y);
-  // the first & the last curve are quadratic Bezier
-  // because I'm using push(), pc[i][1] comes before pc[i][0]
-  ctx.quadraticCurveTo(pc[1][1].x, pc[1][1].y, p[1].x, p[1].y);
-
-  if (p.length > 2) {
-    // central curves are cubic Bezier
-    for (var i = 1; i < p.length - 2; i++) {
-      ctx.bezierCurveTo(pc[i][0].x, pc[i][0].y, pc[i + 1][1].x, pc[i + 1][1].y, p[i + 1].x, p[i + 1].y);
-    }
-    // the first & the last curve are quadratic Bezier
-    var n = p.length - 1;
-    ctx.quadraticCurveTo(pc[n - 1][0].x, pc[n - 1][0].y, p[n].x, p[n].y);
-  }
-
-  //ctx.lineTo(p[p.length-1].x, B.y- 25);
-  ctx.stroke();
-  ctx.save();
-  ctx.fillStyle = grd;
-  ctx.fill();
-  ctx.restore();
-}
-
-function arrayMax(array) {
-  return Math.max.apply(Math, array);
-};
-
-function arrayMin(array) {
-  return Math.min.apply(Math, array);
-};
-
-function oMousePos(canvas, evt) {
-  var ClientRect = canvas.getBoundingClientRect();
-  return { //objeto
-    x: Math.round(evt.clientX - ClientRect.left),
-    y: Math.round(evt.clientY - ClientRect.top)
-  }
-}
-
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
-
+  })
+ </script>
 </body>
 </html>
