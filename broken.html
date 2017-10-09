@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vuetify Parallax Starter</title>
+  <title>APekearo Vue Portfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
@@ -14,105 +14,119 @@
       <v-toolbar-title v-text="title"></v-toolbar-title>
     </v-toolbar>
     <main>
-      <v-content>
-        <section>
-          <v-parallax src="assets/hero.jpeg" height="600">
-            <v-layout
-              column
-              align-center
-              justify-center
-              class="white--text"
-            >
-              <h1 class="white--text mb-2 display-3">Web Developer</h1>
-            <div class="headline mb-3 text-xs-center">Creator: Anthony Pekearo</div>
-            <div class="headline mb-4 text-xs-right">Created With Vue.Js</div>
-            
-            </v-layout>
-          </v-parallax>
-        </section>
-
-        <section>
+      <section>
+        <v-parallax src="assets/hero.jpeg" height="600">
           <v-layout
             column
-            wrap
-            class="my-5"
             align-center
+            justify-center
+            class="white--text"
           >
-            <v-flex xs12 sm4 class="my-3">
-              <div class="text-xs-center">
-                <h2 class="headline">A Great Resource For Building Your Next Project</h2>
-                <span class="subheading">
-                  Will Build All Types Of Ideas 
-                </span>
-              </div>
-            </v-flex>
-            <v-flex xs12>
-              <v-container grid-list-xl>
-                <v-layout row wrap align-center>
-                  <v-flex xs12 md4>
-                    <v-card class="elevation-0 transparent">
-                      <v-card-text class="text-xs-center">
-                        <v-icon x-large class="blue--text text--lighten-2">color_lens</v-icon>
-                      </v-card-text>
-                      <v-card-title primary-title class="layout justify-center">
-                        <div class="headline text-xs-center">Style &amp; Design</div>
-                      </v-card-title>
-                      <v-card-text>
-                        Applying original styling languages and modern styling frameworks 
+            <!-- <img src="assets/vuetify.png" alt="Vuetify.js"> -->
+            <h1 class="white--text mb-2 display-3">Web Developer</h1>
+            <div class="headline mb-3 text-xs-center">Creator: Anthony Pekearo</div>
+            <div class="headline mb-4 text-xs-right">Created With Vue.Js</div>
+            <!-- <v-btn
+              class="blue lighten-2 mt-5"
+              dark
+              large
+              href="/pre-made-themes"
+            >
+              Get Started
+            </v-btn> -->
+          </v-layout>
+        </v-parallax>
+      </section>
+
+      <section>
+        <v-layout
+          column
+          wrap
+          class="my-5"
+          align-center
+        >
+          <v-flex xs12 sm4 class="my-3">
+            <div class="text-xs-center">
+              <h2 class="headline">A Great Resource For Building Your Next Project</h2>
+              <span class="subheading">
+                Will Build All Types Of Ideas 
+              </span>
+            </div>
+          </v-flex>
+          <v-flex xs12>
+            <v-container grid-list-xl>
+              <v-layout row wrap align-center>
+                <v-flex xs12 md4>
+                  <v-card class="elevation-0 transparent">
+                  <v-card-text class="text-xs-center">
+                      <v-icon x-large class="blue--text text--lighten-2">color_lens</v-icon>
+                    </v-card-text>
+                    <div class="headline text-xs-center">Style &amp; Design</div>
+                    </v-card-title>
+                    <v-card-text>
+                      Applying original styling languages and modern styling frameworks 
                       to a developing web based world.  As simple or complicated as it may 
                       be, anything is possible, as I make sure you have the style you want to 
                       represent your product.
                     </v-card-text>
-                    </v-card>
-                  </v-flex>
-                  <v-flex xs12 md4>
-                    <v-card class="elevation-0 transparent">
-                      <v-card-text class="text-xs-center">
-                        <v-icon x-large class="blue--text text--lighten-2">flash_on</v-icon>
-                      </v-card-text>
-                      <v-card-title primary-title class="layout justify-center">
-                        <div class="headline">Fast development</div>
-                      </v-card-title>
-                      <v-card-text>
-                        Using the newest tools and development methods, I will make any deadline set,
+                  </v-card>
+                </v-flex>
+                <v-flex xs12 md4>
+                  <v-card class="elevation-0 transparent">
+                    <v-card-text class="text-xs-center">
+                      <v-icon x-large class="blue--text text--lighten-2">flash_on</v-icon>
+                    </v-card-text>
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline">Fast development</div>
+                    </v-card-title>
+                    <v-card-text>
+                      Using the newest tools and development methods, I will make any deadline set,
                       and will be an asset when needing changes done quickly.  Scaling up or creating 
                       from ground up, the finished product will have a modern, responsive, and activated 
                       user experience.
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                  <v-flex xs12 md4>
-                    <v-card class="elevation-0 transparent">
-                      <v-card-text class="text-xs-center">
-                        <v-icon x-large class="blue--text text--lighten-2">build</v-icon>
-                      </v-card-text>
-                      <v-card-title primary-title class="layout justify-center">
-                        <div class="headline text-xs-center">Completely Open Sourced</div>
-                      </v-card-title>
-                      <v-card-text>
-                        I have always supported the open source community, and will always contribute 
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+                <v-flex xs12 md4>
+                  <v-card class="elevation-0 transparent">
+                    <v-card-text class="text-xs-center">
+                      <v-icon x-large class="blue--text text--lighten-2">build</v-icon>
+                    </v-card-text>
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline text-xs-center">Completely Open Sourced</div>
+                    </v-card-title>
+                    <v-card-text>
+                    I have always supported the open source community, and will always contribute 
                     to github and stackoverflow forums.  The support and quality of open source tools 
                     help fuel a fluid internet that will continue to flourish as we perfect the flow of 
-                    all the tools. 
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-flex>
+                    all the tools.  
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </v-flex>
+        </v-layout>
+      </section>
+
+      <section>
+        <v-parallax src="assets/section.jpeg" height="380">
+          <v-layout column align-center justify-center>
+            <div class="headline white--text mb-3">Dreams of your own site becoming reality have never been closer</div>
+            <em>Contact Me Today To See What We Can Make Happen</em>
+            <!-- <v-btn
+              class="blue lighten-2 mt-5"
+              dark
+              large
+              href="/pre-made-themes"
+            >
+              Get Started
+            </v-btn> -->
           </v-layout>
-        </section>
+        </v-parallax>
+      </section>
 
-        <section>
-          <v-parallax src="assets/section.jpeg" height="380">
-            <v-layout column align-center justify-center>
-              <div class="headline white--text mb-3 text-xs-center">Dreams of your own site becoming reality have never been closer</div>
-              <em>Contact Me Today To See What We Can Make Happen</em>
-            </v-layout>
-          </v-parallax>
-        </section>
-
-         <section>
+      <section>
         <v-layout
           column
           wrap
@@ -245,14 +259,16 @@ Email me about a job, an idea, or just to say hello! Thank You Guys!!</v-card-te
         </v-container>
       </section>
 
-        <v-footer class="blue darken-2">
-          <v-layout row wrap align-center>
-            <v-flex xs12>
-              <div align="right" style="visibility:hidden"><img src="http://simplehitcounter.com/hit.php?uid=2298969&f=65280&b=16776960" border="0" height="18" width="83" alt="web counter"></div>
-            </v-flex>
-          </v-layout>
-        </v-footer>
-      </v-content>
+       <v-footer class="blue darken-2">
+        <v-layout row wrap align-center>
+          <v-flex xs12>
+            <!-- Start of SimpleHitCounter Code -->
+            <!-- Start of SimpleHitCounter Code -->
+<div align="right" style="visibility:hidden"><img src="http://simplehitcounter.com/hit.php?uid=2298969&f=65280&b=16776960" border="0" height="18" width="83" alt="web counter"></div>
+<!-- End of SimpleHitCounter Code -->
+          </v-flex>
+        </v-layout>
+      </v-footer> 
     </main>
   </v-app>
  </div>
@@ -263,7 +279,7 @@ Email me about a job, an idea, or just to say hello! Thank You Guys!!</v-card-te
     el: '#app',
     data () {
       return {
-         title: 'Web Developer: Anthony Pekearo',
+        title: 'Web Developer: Anthony Pekearo',
         size: 20,
         url: "http://www.crazyricky.com",
         url2: "http://stumput.github.io",
