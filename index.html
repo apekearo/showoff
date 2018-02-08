@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!-- put a tutorial, put up more sites you did,
+ showcase your austin american statesman, you resume,
+  and few quotes mentioning your work, good projects 
+   and ideas of products you work on but can't quite finish -->
 <html>
 <head>
   <title>Anthony Pekearo's Site!</title>
@@ -26,6 +30,14 @@
             <div class="headline mb-2 display-1 text-xs-center">Anthony Pekearo</div>
             <h1 class="white--text mb-3 display-2">Web Developer</h1>
             <div class="headline mb-4 text-xs-right">Created With Vue.Js</div>
+            
+                <v-dialog v-model="dialog" width="500px">
+                  <v-btn style="background-color:#980000" dark slot="activator">Check My Resume!!</v-btn>
+                  <v-card style="background-color:#a4a7a8">
+                    <img :src="'AnthonyPekearoWebDev.png'" v-bind:style="{height: '80%', width: '90%'}">                  
+                  </v-card>
+                </v-dialog>
+              
             
             </v-layout>
           </v-parallax>
@@ -145,7 +157,7 @@
                      <a :href="url" target="_blank">
                        <div class="text-xs-center">
                       <!-- osei -->
-                     <img :src="'crazy1.jpg'" v-bind:style="{height:'80%', width:'90%'}"> 
+                     <img :src="'crazy1.jpg'" v-bind:style="{height:'80%', width:'90%'}">
                     </div></a>
                   </v-card>
                 </v-flex>
@@ -173,12 +185,12 @@
                     </v-card-text> -->
                     <v-card-title primary-title class="layout justify-center">
                      <a :href="url3" target="_blank" class="red--text text--lighten-2">
-                      <div class="headline text-xs-center">Red Wraps</div>
+                      <div class="headline text-xs-center">Sheverb</div>
                      </a> 
                     </v-card-title>
                     <a :href="url3" target="_blank">
                    <div class="text-xs-center">
-                     <img :src="'redWrap.jpg'" v-bind:style="{height:'80%', width:'90%'}">
+                     <img :src="'sheverb.png'" v-bind:style="{height:'80%', width:'90%'}">
                      </div>
                     </a>
                   </v-card>
@@ -267,7 +279,8 @@ Email me about a job, an idea, or just to say hello! Thank You Guys!!</v-card-te
         size: 20,
         url: "http://www.crazyricky.com",
         url2: "http://heyearl.ga",
-        url3: "http://redwraps.github.io"
+        url3: "https://apekearo.github.io/sheVerb-redemption-show/"
+        // "http://redwraps.github.io"
       }
     }
   })
