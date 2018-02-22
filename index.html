@@ -20,7 +20,7 @@
     <main>
       <v-content>
         <section>
-          <v-parallax src="assets/desk.png" style="height: 100vh">
+          <v-parallax src="assets/desk.png" style="height: 109vh;">
             <v-layout
               column
               align-center
@@ -36,8 +36,11 @@
                   <v-card style="background-color:#a4a7a8">
                     <img :src="'AnthonyPekearoWebDev.png'" v-bind:style="{height: '80%', width: '90%'}">                  
                   </v-card>
+                  
                 </v-dialog>
-              
+              <a :href="url4" target="_blank" style="text-decoration: none;">                  
+                    <v-btn style="background-color:#980000" dark slot="activator"> Dec 2, 2017 Austin American Statesman Story About Me!!</v-btn>
+                </a>
             
             </v-layout>
           </v-parallax>
@@ -116,7 +119,7 @@
         </section>
 
         <section>
-          <v-parallax src="assets/desk2.jpg" height="200">
+          <v-parallax src="assets/desk2.jpg" height="300" style="background-size:cover; ">
             <v-layout column align-center justify-center>
               <div class="headline white--text mb-3 text-xs-center">Dreams of your own site becoming reality have never been closer</div>
               <em>Contact Me Today To See What We Can Make Happen</em>
@@ -275,11 +278,12 @@ Email me about a job, an idea, or just to say hello! Thank You Guys!!</v-card-te
     el: '#app',
     data () {
       return {
-         title: 'Full-Stack Developer/Data Modeler and Scientist/Microcontroller Artist/apekearo@gmail.com',
+         title: 'Full-Stack Developer/Data Modeler/Microcontroller Artist/Musician/  apekearo@gmail.com',
         size: 20,
         url: "http://www.crazyricky.com",
         url2: "http://heyearl.ga",
-        url3: "https://apekearo.github.io/sheVerb-redemption-show/"
+        url3: "https://apekearo.github.io/sheVerb-redemption-show/",
+        url4: "http://www.512tech.com/technology/code-schools-can-lifeline-for-those-with-options-austin-grads-say/ZGu6UxIplmvIH49HakXsnN/#U07665746324baB"
         // "http://redwraps.github.io"
       }
     }
