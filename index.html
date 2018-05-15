@@ -10,29 +10,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Share+Tech:300,400,500,700|Material+Icons' rel="stylesheet">
   <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <style>
   #app {font-family: 'Share Tech', sans-serif;}
-</style>
+  @-webkit-keyframes bg-change {
+    0%   {background-color:red; left:0px; }
+    10%  {background-color: coral; left:100px;}
+    25%  {background-color:yellow; left:200px;}
+    50%  {background-color:blue; left:350px;}
+    75%  {background-color:green; left:500px;}
+    100% {background-color:red; left:790px;}
+  }
+  @keyframes bg-change {
+    0%   {background-color:red; left:0px; }
+    10%  {background-color: coral; left:100px;}
+    25%  {background-color:yellow; left:200px;}
+    50%  {background-color:blue; left:350px;}
+    75%  {background-color:green; left:500px;}
+    100% {background-color:red; left:790px;}
+  }
+  #headerbar{ position: relative;
+    animation-name: bg-change;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  </style>
 <body>
  <div id="app">
    <v-app light>
-    <v-toolbar class="white--text" style="background-color: #980000">
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+    <v-toolbar class="white--text" id="headerback" style="background-color: #980000">
+      <v-toolbar-title v-text="title" id="headerbar"></v-toolbar-title>
     </v-toolbar>
     <main>
       <v-content>
         <section>
-          <v-parallax src="assets/desk.png" style="height: 109vh;">
+          <v-parallax src="assets/desk.png" style="height: 107vh;">
             <v-layout
               column
               align-center
               justify-center
               class="white--text"
             >
-            <div class="headline mb-2 display-1 text-xs-center">Anthony Pekearo</div>
+            <div class="headline mb-1 display-1 text-xs-center">Anthony Pekearo</div>
             <h1 class="white--text mb-3 display-2">Web Developer</h1>
             <div class="headline mb-4 text-xs-right">Created With Vue.Js</div>
+            <a :href="url9" target="_blank" style="text-decoration: none;"><v-icon x-large class="text-center">fab fa-github-alt fa-spin</v-icon></a>
+            <a :href="url8" target="_blank" style="text-decoration: none;"><v-icon x-large class="text-center">fab fa-linkedin-in fa-spin</v-icon></a>
             
             <!-- <a :href="url5" target="_blank" style="text-decoration: none;">                  
                 <v-btn style="background-color:#980000" dark slot="activator"> The Graffiti Project </v-btn>
@@ -350,7 +375,9 @@ Email me about a job, an idea, or just to say hello! Thank You All!!</v-card-tex
                 // "http://redwraps.github.io"
         url5: "http://www.riverforestfarm.com",
         url6: "http://www.fatcactusband.gq",
-        url7: "https://scraperofarticles.herokuapp.com/"
+        url7: "https://scraperofarticles.herokuapp.com/",
+        url8: "https://linkedin.com/in/apekearo/",
+        url9: "https://github.com/apekearo/"
       }
     }
   })
