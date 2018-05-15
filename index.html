@@ -16,6 +16,7 @@
   #app {font-family: 'Share Tech', sans-serif;}
   @-webkit-keyframes bg-change {
     0%   {background-color:red; left:0px; }
+    5%   {background-color: indianred; left:23px;}
     10%  {background-color: coral; left:100px;}
     25%  {background-color:yellow; left:200px;}
     50%  {background-color:blue; left:350px;}
@@ -35,6 +36,8 @@
     animation-duration: 7s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    border-radius: 40px 20px;
+    padding: 10px;
   }
   </style>
 <body>
@@ -45,8 +48,8 @@
     </v-toolbar>
     <main>
       <v-content>
-        <section>
-          <v-parallax src="assets/desk.png" style="height: 107vh;">
+        <section style=" background-color: #980000">
+          <v-parallax src="assets/desk.png" style="height: 108vh;">
             <v-layout
               column
               align-center
