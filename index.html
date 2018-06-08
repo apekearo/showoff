@@ -13,6 +13,9 @@
   <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script src="counter.js"></script>
 <style>
   #app {font-family: 'Share Tech', sans-serif;}
   @-webkit-keyframes bg-change {
@@ -50,7 +53,7 @@
     <main>
       <v-content>
         <section style=" background-color: #980000">
-          <v-parallax src="assets/desk.png" style="height: 108vh;">
+          <v-parallax src="assets/desk.png" style="height: 75vh;">
             <v-layout
               column
               align-center
@@ -77,6 +80,12 @@
               <a :href="url4" target="_blank" style="text-decoration: none;">                  
                     <v-btn style="background-color:#980000" dark slot="activator"> Dec 2, 2017 Austin American Statesman Story About Me!!</v-btn>
                 </a>
+                <br>
+                <!-- <h1>Ouch! You've clicked me
+                  <span id="click-value"></span> times!</h1>
+              
+                <!-- Button -->
+                <!-- <button id="click-button">Click Me!!!!</button> -->
             
             </v-layout>
           </v-parallax>
