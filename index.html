@@ -13,7 +13,7 @@
   <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script src="counter.js"></script>
 <style>
@@ -43,6 +43,14 @@
     border-radius: 40px 20px;
     padding: 10px;
   }
+  .MeSmile {
+    height: 180vh;
+  }
+  @media screen and (max-width: 400px) {
+    .MeSmile { 
+       height: 75vh; 
+    }
+}
   </style>
 <body>
  <div id="app">
@@ -53,7 +61,7 @@
     <main>
       <v-content>
         <section style=" background-color: #980000">
-          <v-parallax src="assets/desk.png" style="height: 75vh;">
+          <v-parallax src="assets/desk.png" class='MeSmile'>
             <v-layout
               column
               align-center
@@ -352,7 +360,7 @@ Email me about a job, an idea, or just to say hello! Thank You All!!</v-card-tex
                       <v-icon class="red--text text--lighten-2">phone</v-icon>
                     </v-list-tile-action>
                     <v-list-tile-content>
-                      <v-list-tile-title>817-688-3665</v-list-tile-title>
+                      <v-list-tile-title>817-Six6 Eight8 Eight8-3665</v-list-tile-title>
                     </v-list-tile-content>
                   </v-list-tile>
                   <v-list-tile>
