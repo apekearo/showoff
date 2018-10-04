@@ -1,425 +1,271 @@
 <!DOCTYPE html>
-<!-- put a tutorial, put up more sites you did,
- showcase your austin american statesman, you resume,
-  and few quotes mentioning your work, good projects 
-   and ideas of products you work on but can't quite finish -->
-<html>
+<html lang="en">
+
 <head>
-  <title>Anthony Pekearo's Site!</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="t26AFT62xt2ol4REHvfRTmDmOKRlvK0sf8eNoE3XY3M">
-  <link href='https://fonts.googleapis.com/css?family=Share+Tech:300,400,500,700|Material+Icons' rel="stylesheet">
-  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+    <title>Anthony Pekearo - Web Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="./styles.css">
+
 </head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-<script src="counter.js"></script>
-<style>
-  #app {font-family: 'Share Tech', sans-serif;}
-  @-webkit-keyframes bg-change {
-    0%   {background-color:red; left:0px; }
-    5%   {background-color: indianred; left:23px;}
-    10%  {background-color: coral; left:100px;}
-    25%  {background-color:yellow; left:200px;}
-    50%  {background-color:blue; left:350px;}
-    75%  {background-color:green; left:500px;}
-    100% {background-color:red; left:790px;}
-  }
-  @keyframes bg-change {
-    0%   {background-color:red; left:0px; }
-    10%  {background-color: coral; left:100px;}
-    25%  {background-color:yellow; left:200px;}
-    50%  {background-color:blue; left:350px;}
-    75%  {background-color:green; left:500px;}
-    100% {background-color:red; left:790px;}
-  }
-  #headerbar{ position: relative;
-    animation-name: bg-change;
-    animation-duration: 7s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    border-radius: 40px 20px;
-    padding: 10px;
-  }
-  .MeSmile {
-    height: 180vh;
-  }
-  @media screen and (max-width: 400px) {
-    .MeSmile { 
-       height: 75vh; 
-    }
-}
-  </style>
+
 <body>
- <div id="app">
-   <v-app light>
-    <v-toolbar class="white--text" id="headerback" style="background-color: #980000">
-      <v-toolbar-title v-text="title" id="headerbar"></v-toolbar-title>
-    </v-toolbar>
-    <main>
-      <v-content>
-        <section style=" background-color: #980000">
-          <v-parallax src="assets/desk.png" class='MeSmile'>
-            <v-layout
-              column
-              align-center
-              justify-center
-              class="white--text"
-            >
-            <div class="headline mb-1 display-1 text-xs-center">Anthony Pekearo</div>
-            <h1 class="white--text mb-3 display-2">Web Developer</h1>
-            <div class="headline mb-4 text-xs-right">Created With Vue.Js</div>
-            <a :href="url9" target="_blank" style="text-decoration: none;"><v-icon x-large class="text-center">fab fa-github-alt fa-spin</v-icon></a>
-            <a :href="url8" target="_blank" style="text-decoration: none;"><v-icon x-large class="text-center">fab fa-linkedin-in fa-spin</v-icon></a>
-            
-            <!-- <a :href="url5" target="_blank" style="text-decoration: none;">                  
-                <v-btn style="background-color:#980000" dark slot="activator"> The Graffiti Project </v-btn>
-            </a> -->
+    <div class="container">
 
-                <v-dialog v-model="dialog" width="500px">
-                  <v-btn style="background-color:#980000" dark slot="activator">Check My Resume!!</v-btn>
-                  <v-card style="background-color:#a4a7a8">
-                    <img :src="'AnthonyPekearoWebDev.png'" v-bind:style="{height: '80%', width: '90%'}">                  
-                  </v-card>
-                  
-                </v-dialog>
-              <a :href="url4" target="_blank" style="text-decoration: none;">                  
-                    <v-btn style="background-color:#980000" dark slot="activator"> Dec 2, 2017 Austin American Statesman Story About Me!!</v-btn>
-                </a>
-                <br>
-                <!-- <h1>Ouch! You've clicked me
-                  <span id="click-value"></span> times!</h1>
-              
-                <!-- Button -->
-                <!-- <button id="click-button">Click Me!!!!</button> -->
-            
-            </v-layout>
-          </v-parallax>
-        </section>
+        <div id="carousel">
+        	<div class="carousel-item-spacer">
+						<p>This is a spacer</p>
+        	</div>
+	        <div class="carousel-item">
+	            <div class="left">
+	                <p><a href="http://heyearl.ga" target="_blank">HeyEarl.ga</a> uses Twilio and Node.js to allow rural users to post to a local job board via text message and web.
+	                </p>
+	            </div>
+	            <div class="center">
+	                <h2>HeyEarl.ga</h2>
+	                <p>A job board built for rural users.</p>
+	                <img class="project-img" src="heyearl.png" alt="Hey Earl Website">
+	                <a class="search-holder" href="http://heyearl.ga" target="_blank">
+	                    <?xml version="1.0" ?>
+	                    <svg height="20px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+	                        <title/>
+	                        <desc/>
+	                        <defs/>
+	                        <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+	                            <g fill="white" id="icon-111-search">
+	                                <path d="M19.4271164,21.4271164 C18.0372495,22.4174803 16.3366522,23 14.5,23 C9.80557939,23 6,19.1944206 6,14.5 C6,9.80557939 9.80557939,6 14.5,6 C19.1944206,6 23,9.80557939 23,14.5 C23,16.3366522 22.4174803,18.0372495 21.4271164,19.4271164 L27.0119176,25.0119176 C27.5621186,25.5621186 27.5575313,26.4424687 27.0117185,26.9882815 L26.9882815,27.0117185 C26.4438648,27.5561352 25.5576204,27.5576204 25.0119176,27.0119176 L19.4271164,21.4271164 L19.4271164,21.4271164 Z M14.5,21 C18.0898511,21 21,18.0898511 21,14.5 C21,10.9101489 18.0898511,8 14.5,8 C10.9101489,8 8,10.9101489 8,14.5 C8,18.0898511 10.9101489,21 14.5,21 L14.5,21 Z" id="search" />
+	                            </g>
+	                        </g>
+	                    </svg>
+	                </a>
+	            </div>
+	            <div class="right">
+	                <div class="dev-icons">
+	                    <div class="first-row">
+	                        <i class="devicon-html5-plain-wordmark colored"></i>
+	                        <i class="devicon-heroku-plain colored"></i>
+	                        <i class="devicon-javascript-plain colored"></i>
+	                    </div>
+	                    <div class="second-row">
+	                        <i class="devicon-vuejs-plain colored"></i>
+	                        <i class="devicon-nodejs-plain colored"></i>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="carousel-item">
+	            <div class="left">
+	                <p><a href="http://www.riverforestfarm.com">RiverForestFarm</a> is a space for local farmers to enter crop data into a database, post listings on craigslist like board, and easy to find USDA charts to provide up to date education on the national numbers. </p>
+	            </div>
+	            <div class="center">
+	                <h2>RiverForestFarm.com</h2>
+	                <p>A farmer's online source for local crop data and local listings.</p>
+	                <img class="project-img" src="riverforest.png" alt="River Forest Farm Website">
+	                <a class="search-holder" href="http://www.riverforestfarm.com" target="_blank">
+	                    <?xml version="1.0" ?>
+	                    <svg height="20px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+	                        <title/>
+	                        <desc/>
+	                        <defs/>
+	                        <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+	                            <g fill="white" id="icon-111-search">
+	                                <path d="M19.4271164,21.4271164 C18.0372495,22.4174803 16.3366522,23 14.5,23 C9.80557939,23 6,19.1944206 6,14.5 C6,9.80557939 9.80557939,6 14.5,6 C19.1944206,6 23,9.80557939 23,14.5 C23,16.3366522 22.4174803,18.0372495 21.4271164,19.4271164 L27.0119176,25.0119176 C27.5621186,25.5621186 27.5575313,26.4424687 27.0117185,26.9882815 L26.9882815,27.0117185 C26.4438648,27.5561352 25.5576204,27.5576204 25.0119176,27.0119176 L19.4271164,21.4271164 L19.4271164,21.4271164 Z M14.5,21 C18.0898511,21 21,18.0898511 21,14.5 C21,10.9101489 18.0898511,8 14.5,8 C10.9101489,8 8,10.9101489 8,14.5 C8,18.0898511 10.9101489,21 14.5,21 L14.5,21 Z" id="search" />
+	                            </g>
+	                        </g>
+	                    </svg>
+	                </a>
+	            </div>
+	            <div class="right">
+	                <div class="dev-icons">
+	                    <div class="first-row">
+	                        <i class="devicon-html5-plain-wordmark colored"></i>
+	                        <i class="devicon-jquery-plain-wordmark"></i>
+	                        <i class="devicon-javascript-plain colored"></i>
+	                    </div>
+	                    <div class="second-row">
+	                        <i class="devicon-nodejs-plain colored"></i>
+	                        <i class="devicon-heroku-plain-wordmark colored"></i>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="carousel-item">
+	            <div class="left">
+						
+	                <p><a href="https://ethanmasterofthehawaiianukulele.com/" target="_blank">Ethan Master Of The Hawaiian Ukulele</a><br>Showing off a friend's musical content for a tour he just took off on.</p>
+	            </div>
+	            <div class="center">
+	                <h2>Fun Band Page</h2>
+	                <p>Fun in the front end.</p>
+	                <img class="project-img" src="ethan.jpg" alt="EMHU website">
+	                <a class="search-holder" href="https://ethanmasterofthehawaiianukulele.com/" target="_blank">
+	                    <?xml version="1.0" ?>
+	                    <svg height="20px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+	                        <title/>
+	                        <desc/>
+	                        <defs/>
+	                        <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+	                            <g fill="white" id="icon-111-search">
+	                                <path d="M19.4271164,21.4271164 C18.0372495,22.4174803 16.3366522,23 14.5,23 C9.80557939,23 6,19.1944206 6,14.5 C6,9.80557939 9.80557939,6 14.5,6 C19.1944206,6 23,9.80557939 23,14.5 C23,16.3366522 22.4174803,18.0372495 21.4271164,19.4271164 L27.0119176,25.0119176 C27.5621186,25.5621186 27.5575313,26.4424687 27.0117185,26.9882815 L26.9882815,27.0117185 C26.4438648,27.5561352 25.5576204,27.5576204 25.0119176,27.0119176 L19.4271164,21.4271164 L19.4271164,21.4271164 Z M14.5,21 C18.0898511,21 21,18.0898511 21,14.5 C21,10.9101489 18.0898511,8 14.5,8 C10.9101489,8 8,10.9101489 8,14.5 C8,18.0898511 10.9101489,21 14.5,21 L14.5,21 Z" id="search" />
+	                            </g>
+	                        </g>
+	                    </svg>
+	                </a>
+	            </div>
+	            <div class="right">
+	                <div class="dev-icons">
+	                    <div class="first-row">
+	                        <i class="devicon-github-plain colored"></i>
+	                        <i class="devicon-javascript-plain colored"></i>
+	                    </div>
+	                    <div class="second-row">
+	                        <i class="devicon-nodejs-plain colored"></i>
+	                        <i class="devicon-html5-plain colored"></i>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
 
-        <section>
-          <v-layout
-            column
-            wrap
-            class="my-5"
-            align-center
-          >
-            <v-flex xs12 sm4 class="my-3">
-              <div class="text-xs-center">
-                <h2 class="headline">A Great Resource For Building Your Next Project</h2>
-                <span class="subheading">
-                  Will Build All Types Of Ideas 
-                </span>
-              </div>
-            </v-flex>
-            <v-flex xs12>
-              <v-container grid-list-xl>
-                <v-layout row wrap align-center>
-                  <v-flex xs12 md4>
-                    <v-card class="elevation-0 transparent">
-                      <v-card-text class="text-xs-center">
-                        <v-icon x-large class="red--text text--lighten-2">color_lens</v-icon>
-                      </v-card-text>
-                      <v-card-title primary-title class="layout justify-center">
-                        <div class="headline text-xs-center">Style &amp; Design</div>
-                      </v-card-title>
-                      <v-card-text>
-                        Applying original styling languages and modern styling frameworks 
-                      to a developing web based world.  As simple or complicated as it may 
-                      be, anything is possible, as I make sure you have the style you want to 
-                      represent your product.
-                    </v-card-text>
-                    </v-card>
-                  </v-flex>
-                  <v-flex xs12 md4>
-                    <v-card class="elevation-0 transparent">
-                      <v-card-text class="text-xs-center">
-                        <v-icon x-large class="red--text text--lighten-2">flash_on</v-icon>
-                      </v-card-text>
-                      <v-card-title primary-title class="layout justify-center">
-                        <div class="headline">Fast development</div>
-                      </v-card-title>
-                      <v-card-text>
-                        Using the newest tools and development methods, I will make any deadline set,
-                      and will be an asset when needing changes done quickly.  Scaling up or creating 
-                      from ground up, the finished product will have a modern, responsive, and activated 
-                      user experience.
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                  <v-flex xs12 md4>
-                    <v-card class="elevation-0 transparent">
-                      <v-card-text class="text-xs-center">
-                        <v-icon x-large class="red--text text--lighten-2">build</v-icon>
-                      </v-card-text>
-                      <v-card-title primary-title class="layout justify-center">
-                        <div class="headline text-xs-center">Completely Open Sourced</div>
-                      </v-card-title>
-                      <v-card-text>
-                        I have always supported the open source community and contribute 
-                    to github and stackoverflow forums.  The support and quality of open source tools 
-                    help fuel a fluid internet that will continue to flourish as we perfect the flow of 
-                    all the tools. 
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-flex>
-          </v-layout>
-        </section>
+	        <div class="carousel-item-spacer">
+	        	<p>This is a spacer</p>
+	        </div>
+        </div>
 
-        <section>
-          <v-parallax src="assets/section2.jpg" height="300" style="background-size:cover; ">
-            <v-layout column align-center justify-center>
-              <div class="headline white--text mb-3 text-xs-center">Dreams of your own site becoming reality have never been closer</div>
-              <em>Contact Me Today To See What We Can Make Happen</em>
-            </v-layout>
-          </v-parallax>
-        </section>
 
-         <section>
-        <v-layout
-          column
-          wrap
-          class="my-5"
-          align-center
-        >
-          <v-flex xs12 sm4 class="my-3">
-            <div class="text-xs-center">
-              <h2 class="headline">Check Out Some Of My Latest Projects</h2>
-              <span class="subheading">
-                Will Build All Types Of Ideas 
-              </span>
-            </div>
-          </v-flex>
-          <v-flex xs12>
-            <v-container grid-list-xl>
-              <v-layout row wrap align-center>
-                <v-flex xs12 md4>
-                  <v-card class="elevation-0 transparent">
-                    <!-- <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">color_lens</v-icon>
-                    </v-card-text> -->
-                    <v-card-title primary-title class="layout justify-center">
-                    <a :href="url" target="_blank" class="red--text text--lighten-2">
-                      <div class="headline text-xs-center">Crazy Ricky's</div>
-                    </a>
-                    </v-card-title>
+        <div id="carousel-mobile">
+        	<div class="carousel-item-mob">
+        	    <div class="center">
+        	        <h2>RiverForestFarm</h2>
+        	        <p>A farmer's online source for local crop data and local listings.</p>
+        	        <img class="project-img" src="riverforest.png" alt="River Forest Farm">
+        	        <a class="search-holder" href="http://www.riverforestfarm.com" target="_blank">
+        	            <?xml version="1.0" ?>
+        	            <svg height="20px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+        	                <title/>
+        	                <desc/>
+        	                <defs/>
+        	                <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+        	                    <g fill="white" id="icon-111-search">
+        	                        <path d="M19.4271164,21.4271164 C18.0372495,22.4174803 16.3366522,23 14.5,23 C9.80557939,23 6,19.1944206 6,14.5 C6,9.80557939 9.80557939,6 14.5,6 C19.1944206,6 23,9.80557939 23,14.5 C23,16.3366522 22.4174803,18.0372495 21.4271164,19.4271164 L27.0119176,25.0119176 C27.5621186,25.5621186 27.5575313,26.4424687 27.0117185,26.9882815 L26.9882815,27.0117185 C26.4438648,27.5561352 25.5576204,27.5576204 25.0119176,27.0119176 L19.4271164,21.4271164 L19.4271164,21.4271164 Z M14.5,21 C18.0898511,21 21,18.0898511 21,14.5 C21,10.9101489 18.0898511,8 14.5,8 C10.9101489,8 8,10.9101489 8,14.5 C8,18.0898511 10.9101489,21 14.5,21 L14.5,21 Z" id="search" />
+        	                    </g>
+        	                </g>
+        	            </svg>
+        	        </a>
+        	        <div class="about-mobile">
+        	        	<p><a href="http://www.riverforestfarm.com" target="_blank">River Forest Farm</a> is a space for local farmers to enter crop data into a database, post listings on craigslist like board, and easy to find USDA charts to provide up to date education on the national numbers. 
+        	        	</p>
+        	        </div>
+        	        <div class="technologies-mobile">
+        	        	<div class="dev-icons">
+        	        	    <div class="first-row">
+        	        	        <i class="devicon-html5-plain-wordmark colored"></i>
+        	        	        <i class="devicon-heroku-plain colored"></i>
+        	        	        <i class="devicon-javascript-plain colored"></i>
+        	        	    </div>
+        	        	    <div class="second-row">
+        	        	        <i class="devicon-jquery-plain colored"></i>
+        	        	        <i class="devicon-nodejs-plain colored"></i>
+        	        	    </div>
+        	        	</div>
+        	        </div>
+        	    </div>
+        	</div>
+        	<div class="carousel-item-mob">
+        	    <div class="center">
+        	        <h2>HeyEarl</h2>
+        	        <p>A job board built for rural users.</p>
+        	        <img class="project-img" src="heyearl.png" alt="">
+        	        <a class="search-holder" href="http://heyearl.ga" target="_blank">
+        	            <?xml version="1.0" ?>
+        	            <svg height="20px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+        	                <title/>
+        	                <desc/>
+        	                <defs/>
+        	                <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+        	                    <g fill="white" id="icon-111-search">
+        	                        <path d="M19.4271164,21.4271164 C18.0372495,22.4174803 16.3366522,23 14.5,23 C9.80557939,23 6,19.1944206 6,14.5 C6,9.80557939 9.80557939,6 14.5,6 C19.1944206,6 23,9.80557939 23,14.5 C23,16.3366522 22.4174803,18.0372495 21.4271164,19.4271164 L27.0119176,25.0119176 C27.5621186,25.5621186 27.5575313,26.4424687 27.0117185,26.9882815 L26.9882815,27.0117185 C26.4438648,27.5561352 25.5576204,27.5576204 25.0119176,27.0119176 L19.4271164,21.4271164 L19.4271164,21.4271164 Z M14.5,21 C18.0898511,21 21,18.0898511 21,14.5 C21,10.9101489 18.0898511,8 14.5,8 C10.9101489,8 8,10.9101489 8,14.5 C8,18.0898511 10.9101489,21 14.5,21 L14.5,21 Z" id="search" />
+        	                    </g>
+        	                </g>
+        	            </svg>
+        	        </a>
+        	        <div class="about-mobile">
+        	        	<p><a href="http://heyearl.ga">Heyearl.ga</a> uses Twilio and Node.js to allow rural users to post to a local job board via text message and web.
+        	        	</p>
+        	        </div>
+        	        <div class="technologies-mobile">
+        	        	<div class="dev-icons">
+        	        	    <div class="first-row">
+        	        	        <i class="devicon-html5-plain-wordmark colored"></i>
+        	        	        <i class="devicon-vuejs-plain-wordmark"></i>
+        	        	        <i class="devicon-javascript-plain colored"></i>
+        	        	    </div>
+        	        	    <div class="second-row">
+        	        	        <i class="devicon-nodejs-plain colored"></i>
+        	        	        <i class="devicon-heroku-plain-wordmark colored"></i>
+        	        	    </div>
+        	        	</div>
+        	        </div>
+        	    </div>
+        	</div>
+        	<div class="carousel-item-mob">
+        	    <div class="center">
+        	        <h2>Ethan Master Of The Hawaiian Ukulele</h2>
+        	        <p>Showing off a friend's musical content for a tour he just took off on.</p>
+        	        <img class="project-img" src="ethan.jpg" alt="" style="margin-top:50px">
+        	        <a class="search-holder" href="https://ethanmasterofthehawaiianukulele.com" target="_blank">
+        	            <?xml version="1.0" ?>
+        	            <svg height="20px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+        	                <title/>
+        	                <desc/>
+        	                <defs/>
+        	                <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+        	                    <g fill="white" id="icon-111-search">
+        	                        <path d="M19.4271164,21.4271164 C18.0372495,22.4174803 16.3366522,23 14.5,23 C9.80557939,23 6,19.1944206 6,14.5 C6,9.80557939 9.80557939,6 14.5,6 C19.1944206,6 23,9.80557939 23,14.5 C23,16.3366522 22.4174803,18.0372495 21.4271164,19.4271164 L27.0119176,25.0119176 C27.5621186,25.5621186 27.5575313,26.4424687 27.0117185,26.9882815 L26.9882815,27.0117185 C26.4438648,27.5561352 25.5576204,27.5576204 25.0119176,27.0119176 L19.4271164,21.4271164 L19.4271164,21.4271164 Z M14.5,21 C18.0898511,21 21,18.0898511 21,14.5 C21,10.9101489 18.0898511,8 14.5,8 C10.9101489,8 8,10.9101489 8,14.5 C8,18.0898511 10.9101489,21 14.5,21 L14.5,21 Z" id="search" />
+        	                    </g>
+        	                </g>
+        	            </svg>
+        	        </a>
+        	        <div class="about-mobile">
+		                <p>Fun in the front end</p>
+        	        </div>
+        	        <div class="technologies-mobile">
+        	        	<div class="dev-icons">
+        	        	    <div class="first-row">
+        	        	        <i class="devicon-github-plain colored"></i>
+        	        	        <i class="devicon-javascript-plain colored"></i>
+        	        	    </div>
+        	        	    <div class="second-row">
+        	        	        <i class="devicon-nodejs-plain colored"></i>
+        	        	        <i class="devicon-html5-plain colored"></i>
+        	        	    </div>
+        	        	</div>
+        	        </div>
+        	    </div>
+        	</div>
+        </div>
 
-                    <!-- trying to style the little pics -->
-                     <a :href="url" target="_blank">
-                       <div class="text-xs-center">
-                      <!-- osei -->
-                     <img :src="'crazy1.jpg'" v-bind:style="{height:'80%', width:'90%'}">
-                    </div></a>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md4>
-                  <v-card class="elevation-0 transparent">
-                    <!-- <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">flash_on</v-icon>
-                    </v-card-text> -->
-                    <v-card-title primary-title class="layout justify-center">
-                    <a :href="url2" target="_blank" class="red--text text--lighten-2">
-                      <div class="headline">Hey Earl</div>
-                    </a>
-                    </v-card-title>
-                  <a :href="url2" target="_blank">
-                    <div class="text-xs-center">
-                      <img :src="'heyearl.jpg'" v-bind:style="{height:'80%', width:'90%'}">
-                      </div>
-                    </a>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md4>
-                  <v-card class="elevation-0 transparent">
-                    <!-- <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">build</v-icon>
-                    </v-card-text> -->
-                    <v-card-title primary-title class="layout justify-center">
-                     <a :href="url3" target="_blank" class="red--text text--lighten-2">
-                      <div class="headline text-xs-center">Sheverb</div>
-                     </a> 
-                    </v-card-title>
-                    <a :href="url3" target="_blank">
-                   <div class="text-xs-center">
-                     <img :src="'sheverb.png'" v-bind:style="{height:'80%', width:'90%'}">
-                     </div>
-                    </a>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-              <!-- starting a new row of projects -->
-              <v-layout row wrap align-center>
-                <v-flex xs12 md4>
-                  <v-card class="elevation-0 transparent">
-                    <!-- <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">color_lens</v-icon>
-                    </v-card-text> -->
-                    <v-card-title primary-title class="layout justify-center">
-                    <a :href="url5" target="_blank" class="red--text text--lighten-2">
-                      <div class="headline text-xs-center">RiverForest Farm</div>
-                    </a>
-                    </v-card-title>
 
-                    <!-- trying to style the little pics -->
-                     <a :href="url5" target="_blank">
-                       <div class="text-xs-center">
-                      <!-- osei -->
-                     <img :src="'assets/riverforest.jpg'" v-bind:style="{height:'80%', width:'90%'}">
-                    </div></a>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md4>
-                  <v-card class="elevation-0 transparent">
-                    <!-- <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">flash_on</v-icon>
-                    </v-card-text> -->
-                    <v-card-title primary-title class="layout justify-center">
-                    <a :href="url6" target="_blank" class="red--text text--lighten-2">
-                      <div class="headline">Fat Cactus Jazz</div>
-                    </a>
-                    </v-card-title>
-                  <a :href="url6" target="_blank">
-                    <div class="text-xs-center">
-                      <img :src="'assets/fatcactus.jpg'" v-bind:style="{height:'80%', width:'90%'}">
-                      </div>
-                    </a>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md4>
-                  <v-card class="elevation-0 transparent">
-                    <!-- <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">build</v-icon>
-                    </v-card-text> -->
-                    <v-card-title primary-title class="layout justify-center">
-                     <a :href="url7" target="_blank" class="red--text text--lighten-2">
-                      <div class="headline text-xs-center">EMHU (band)</div>
-                     </a> 
-                    </v-card-title>
-                    <a :href="url7" target="_blank">
-                   <div class="text-xs-center">
-                     <img :src="'assets/ethan.jpg'" v-bind:style="{height:'80%', width:'90%'}">
-                     </div>
-                    </a>
-                  </v-card>
-                </v-flex>
-                <!-- <v-flex xs12 md4>
-                  <v-card class="elevation-0 transparent"> -->
-                    <!-- <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">build</v-icon>
-                    </v-card-text> -->
-                    <!-- <v-card-title primary-title class="layout justify-center">
-                     <a :href="url7" target="_blank" class="red--text text--lighten-2">
-                      <div class="headline text-xs-center">Mongo News Scraper</div>
-                     </a> 
-                    </v-card-title>
-                    <a :href="url7" target="_blank">
-                   <div class="text-xs-center">
-                     <img :src="'assets/mongo.jpg'" v-bind:style="{height:'80%', width:'90%'}">
-                     </div>
-                    </a>
-                  </v-card>
-                </v-flex> -->
-              </v-layout>
-            </v-container>
-          </v-flex>
-        </v-layout>
-      </section>
 
-      <section>
-        <v-container grid-list-xl>
-          <v-layout row wrap justify-center class="my-5">
-            <v-flex xs12 sm4>
-              <v-card class="elevation-0 transparent">
-                <v-card-title primary-title class="layout justify-center">
-                  <div class="headline">Anthony Pekearo</div>
-                </v-card-title>
-                <v-card-text>
-                  Two and a half years of solid coding, has only made me fall more into the groove of making
-                   amazing programs.  Its a multifaceted industry that keeps me on my toes and I like that.  
-                   When I make a project plan with someone, I work night and day to get it done as quickly as possible.
-                   I have a solid support group from schooling at University of Texas in Austin, and a good group of friends 
-                   that help me stay creative when building projects.  I have a good time coding things out.  Let's work together!
-                </v-card-text>
-              </v-card>
-            </v-flex>
-            <v-flex xs12 sm4 offset-sm1>
-              <v-card class="elevation-0 transparent">
-                <v-card-title primary-title class="layout justify-center">
-                  <div class="headline">Contact me</div>
-                </v-card-title>
-                <v-card-text>
-Email me about a job, an idea, or just to say hello! Thank You All!!</v-card-text>
-                <v-list class="transparent">
-                  <v-list-tile>
-                    <v-list-tile-action>
-                      <v-icon class="red--text text--lighten-2">phone</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                      <v-list-tile-title>817-Six6 Eight8 Eight8-3665</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                  <v-list-tile>
-                    <v-list-tile-action>
-                      <v-icon class="red--text text--lighten-2">place</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                      <v-list-tile-title>Austin,TX US</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                  <v-list-tile>
-                    <v-list-tile-action>
-                      <v-icon class="red--text text--lighten-2">email</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                      <v-list-tile-title>apekearo@gmail.com</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                </v-list>
-              </v-card>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </section>
+        <div class="bottom">
+        	<img src="./tony 05.jpg" alt="Profile pic" class="profile-pic">
+        	<div class="about-me">
+        		<h1>Anthony Pekearo</h1>
+				<h2>Developer</h2>
+			<img src="./email.jpg" alt="my email"> 
+        	</div>
+					<div class="sm-links">
+						<div class="sm-link linkedin">
+							<a href="https://www.linkedin.com/in/apekearo/" target="_blank">
+								<svg id="Linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><title>My LinkedIn Page</title><path id="plain" d="M116,3H12a8.91,8.91,0,0,0-9,8.8V116.22A8.91,8.91,0,0,0,12,125H116a8.93,8.93,0,0,0,9-8.81V11.77A8.93,8.93,0,0,0,116,3ZM39.17,107H21.06V48.73H39.17Zm-9-66.21a10.5,10.5,0,1,1,10.49-10.5A10.5,10.5,0,0,1,30.12,40.77ZM107,107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87,7.36-10.87,15V107H50.53V48.73H67.89v8h.24c2.42-4.58,8.32-9.41,17.13-9.41C103.6,47.28,107,59.35,107,75Z"/></svg>
+							</a>
+						</div>
+					</div>
+        </div>
+    </div>
 
-        <v-footer style="background-color: #980000">
-          <v-layout row wrap align-center>
-            <v-flex xs12>
-              <div align="right" ><img src="http://simplehitcounter.com/hit.php?uid=2298969&f=65280&b=16776960" border="0" height="18" width="83" alt="web counter"></div>
-            </v-flex>
-          </v-layout>
-        </v-footer>
-      </v-content>
-    </main>
-  </v-app>
- </div>
- <script src="https://unpkg.com/vue/dist/vue.js"></script>
- <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
- <script>
-   new Vue({
-    el: '#app',
-    data () {
-      return {
-         title: 'Full-Stack Developer/Data Modeler/Microcontroller Artist/Musician/  apekearo@gmail.com',
-        size: 20,
-        url: "http://www.crazyricky.com",
-        url2: "http://heyearl.ga",
-        url3: "https://apekearo.github.io/sheVerb-redemption-show/",
-        url4: "http://www.512tech.com/technology/code-schools-can-lifeline-for-those-with-options-austin-grads-say/ZGu6UxIplmvIH49HakXsnN/#U07665746324baB",
-                // "http://redwraps.github.io"
-        url5: "http://www.riverforestfarm.com",
-        url6: "http://www.fatcactusband.gq",
-        url7: "http://ethanmasterofthehawaiianukulele.com",
-        // url7: "https://scraperofarticles.herokuapp.com/",
-        url8: "https://linkedin.com/in/apekearo/",
-        url9: "https://github.com/apekearo/"
-      }
-    }
-  })
- </script>
+    <script src="scripts.js"></script>
 </body>
+
 </html>
