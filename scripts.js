@@ -88,7 +88,9 @@ function toggleExpanded(el) {
 function onLoaded() {
 	// pick first card
 
-	let firstCard = document.getElementsByClassName("carousel-item")[1];
+	//this is where i choose where in the carousel i want to show first
+
+	let firstCard = document.getElementsByClassName("carousel-item")[4];
 
 	toggleExpanded(firstCard);
 
