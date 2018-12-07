@@ -240,6 +240,7 @@ a:hover {
 
 	.container {
 		grid-template-rows: 2fr 0.5fr;
+		background-size: cover;
 	}
 	#carousel {
 		display: none;
