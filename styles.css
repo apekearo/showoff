@@ -40,7 +40,7 @@ a:hover {
 		color: grey;
 }
 
-.carousel {
+#carousel {
 		position: relative;
 		z-index: 1;
 		overflow-x: scroll;
@@ -49,7 +49,7 @@ a:hover {
 		overflow: -moz-scrollbars-none;
 }
 
-.carousel::-webkit-scrollbar {
+#carousel::-webkit-scrollbar {
 		display: none;
 }
 
@@ -236,12 +236,12 @@ a:hover {
 }
 
 /*Mobile styles*/
-@media only screen and (max-width: 868px) {
+@media screen and (max-width: 768px) {
 
 	.container {
 		grid-template-rows: 2fr 0.5fr;
 	}
-	.carousel {
+	#carousel {
 		display: none;
 	}
 	#carousel-mobile {
