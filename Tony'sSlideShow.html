@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<style>
+			#container{
+				font-family:monospace;
+				font-weight:bold;
+				color: #fff;
+				background: #161719;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	</head>
+	
+	<body>
+    <!-- //rotate 3s -->
+		
+		<div id="container">
+      <img id="img"></img>
+		</div>
+		
+		
+		<script>
+				var myElement = document.getElementById('img');
+const myPics = [
+'https://www.catster.com/wp-content/uploads/2016/11/600-Lil-BUB.png',
+        'https://heritagepet.com//wp-content/uploads/2017/03/page-square-image5-1.jpg',
+        'https://i.kym-cdn.com/entries/icons/facebook/000/000/472/seriouscatcover.jpg'
+];
+var totalPics = myPics.length;
+var i = 0;
+function loop() {
+if(i > (totalPics - 1)){
+    i = 0;
+}
+myElement.src = myPics[i];
+i++;
+loopTimer = setTimeout(loop,3000);
+}
+loop();
+
+  
+      // for (i = 0; i < images.length; i++) {
+      //   $(".img").attr('src', images[i]);
+      // }
+		</script>
+		
+	</body>
+</html>
